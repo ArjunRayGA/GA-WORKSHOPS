@@ -9,7 +9,7 @@ Data Science Instructor
 ## Instructions
 
 1) Fill out a name placard and place it in front of you on the desk.
-2) Download the [**code demos**]() and extract them to your desktop or some other convenient folder.
+2) Download the [**code demos**](https://www.dropbox.com/s/ym1k44bibx4o4zd/py_for_ds.zip?dl=0) and extract them to your desktop or some other convenient folder.
 3) If you are here early and have technical issues, please bring them up. We will not have time to deal with technical issues during the workshop.
 
 ## Slides
