@@ -204,6 +204,10 @@ scrambled = 'T{vSzXyJ^osatoCJuWZOurtwnDi cAIxMFhXkB\\caaoTpLVnvSqIppfe_TYDAc TrJ
 
 scrambled[6::7]
 
+
+# how do we remove a word from the middle of a string? how do we replace it?
+# looks at str.replace method
+
 # string substitution
 # https://pyformat.info/
 
@@ -211,14 +215,33 @@ print 'my name is {} and I am {} years old'.format('Arjun', 33)
 print 'I want to subsitute the {1} and {0} value in a different order'.format('second', 'first')
 print 'Your name is {name}, today is {day_of_week} and we are in the {class_name} class'.format(name='Sara', day_of_week='Saturday', class_name='Introduction to Python Bootcamp')
 
+
+
+
+
+
+
 # INTEGERS AND FLOATS
 
 # declaration
-my_int = 1
+my_int = 10
 my_float = 1.6
 
 type(my_int)
 type(my_float)
+
+# operators
+
+# + addition
+# - subtraction
+# * multiplication
+# / division
+# ** power
+# % remainder on division
+
+# integer division and remainders
+my_int / 3
+my_int % 3
 
 # conversion
 type(my_int/1.)
@@ -230,4 +253,54 @@ type(int(my_float))
 import sys
 sys.maxint
 sys.float_info
+
+# incrementing/decreminting in place
+my_int += 2
+my_int -= 1
+my_int *= 6
+my_int /= 2
+
+# rounding floats
+
+import math
+math.ceil(3.14157)
+math.floor(6.62607004)
+
+round(3.14157)
+round(3.14157, 3)
+
+
+
+# LISTS
+# list contain heterogenous sets of variables in strict order, and can be mutated, added to, or removed from
+my_list = ["string", 20, True, 36.33, [0,1,2]]
+tic_tac_toe_pos = [[0,1,1],
+                   [1,2,0],
+                   [0,2,0]]
+
+# indexing lists
+my_list[0]
+my_list[-2]
+my_list[0:1]
+my_list[::3]
+
+# indexing multidimensional lists
+row0 = tic_tac_toe_pos[0]
+row0_col2 = tic_tac_toe_pos[0][2]
+
+# reversing lists
+my_list[::-1]
+my_list
+my_list.reverse()
+my_list
+
+# sorting lists
+out_of_order = [0,6,2,7,8,3,1]
+out_of_order.sort()
+out_of_order
+
+# changing values by index
+my_list[3]
+my_list[3] = 'changed'
+my_list
 
