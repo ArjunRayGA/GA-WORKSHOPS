@@ -2,9 +2,8 @@ import csv
 # lets us open addresses in the web browser
 import webbrowser
 
-cc_email = "danny.kirschner@generalassemb.ly"
+cc_email = "danny.kishner@generalassemb.ly"
 dannys_phone_number = '1-401-929-9346'
-
 
 successful_title = 'Congratulations {name}! You were successful!' 
 successful_body = '''
@@ -49,9 +48,10 @@ def popup_compose(email, title, body, cc_email):
     webbrowser.open_new(link_to_gmail)
 
 def load_data(file_name):
-    # opening file without having to do file.close
+    # 'with open' allows opening file without having to do 'file.close'
     with open(file_name, 'r') as f:
         data = csv.reader(f, delimiter=",")
+        # list comprehension: https://www.python-course.eu/list_comprehension.php
         data = [row for row in data]
     return data
 
@@ -60,7 +60,7 @@ def main():
     headers = []
     for i, row in enumerate(data):
         if i == 0:
-            # list comprehension
+            # list comprehension: https://www.python-course.eu/list_comprehension.php
             headers = [h.lower() for h in row]
             continue
         person = {}
@@ -70,13 +70,13 @@ def main():
         person['first_name'] = person['name'].split(' ')[0]
 
         if person['completed'] == '1':
-            # passing vars with same name
+            # passing vars with same name as template string vars is totally fine
             body = successful_body.format(dannys_phone_number=dannys_phone_number, **person)
             title = successful_title.format(**person)
 
             print "{name} succeeded! sending an email to {email}".format(**person)
             popup_compose(person['email'], title, body, cc_email)
-            # collects user input can save it as something if you want
+            # collects user input can save it as something if you want. in this case, used to pause between popups
             raw_input("Press Enter to continue...")
             print
         elif person['completed'] == '0':
