@@ -42,6 +42,12 @@ code and this person can switch from one YOU DO section to another so that each 
 During the YOU DO section, the teacher and TAs will be circulating to try and assist you if you hit a roadblock. After
 the alloted time, the instructor will demonstrate the answer to the question.
 ______________________________________________________________________________________________________________________
+
+
+SLIDES FOR TODAY'S LESSON
+_________________________
+https://goo.gl/k4ax1Z
+
 """
 
 
